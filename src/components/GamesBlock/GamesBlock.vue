@@ -12,36 +12,61 @@ import GameBlock from '../GameBlock/GameBlock.vue';
     </div>
     <div class="games__catalog">
       <div class="games__items">
-        <GameBlock
-          imageUrl="../src/assets/images/games/gametype.2813.jpg"
-          title="Double Jackpot"
-          text="NetentGames"
-        />
-        <GameBlock
-          imageUrl="../src/assets/images/games/gametype.4298.jpg"
-          title="All Aboard: Dynamic corp"
-          text="RushGameStudio"
-        />
-        <GameBlock
-          imageUrl="../src/assets/images/games/gametype.4749.jpg"
-          title="Book Of Tombs"
-          text="NetentGames"
-        />
-        <GameBlock
-          imageUrl="../src/assets/images/games/gametype.4779.jpg"
-          title="Rudolph’s Ride"
-          text="NetentGames"
-        />
-        <GameBlock
-          imageUrl="../src/assets/images/games/gametype.5423.jpg"
-          title="Starburst XXXtreme"
-          text="StarBurst Inc."
-        />
-        <GameBlock
-          imageUrl="../src/assets/images/games/gametype.1882.jpg"
-          title="Black Diamond"
-          text="RushGameStudio"
-        />
+        <div class="games__card">
+          <a href="">
+            <img src="@/assets/images/games/gametype.2813.jpg" alt="Game Image" />
+            <div class="games__text">
+              <h3>Double Jackpot</h3>
+              <p>NetentGames</p>
+            </div>
+          </a>
+        </div>
+        <div class="games__card">
+          <a href="">
+            <img src="@/assets/images/games/gametype.4298.jpg" alt="Game Image" />
+            <div class="games__text">
+              <h3>All Aboard: Dynamic corp</h3>
+              <p>RushGameStudio</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="games__card">
+          <a href="">
+            <img src="@/assets/images/games/gametype.4749.jpg" alt="Game Image" />
+            <div class="games__text">
+              <h3>Book Of Tombs</h3>
+              <p>NetentGames</p>
+            </div>
+          </a>
+        </div>
+        <div class="games__card">
+          <a href="">
+            <img src="@/assets/images/games/gametype.4779.jpg" alt="Game Image" />
+            <div class="games__text">
+              <h3>Rudolph’s Ride</h3>
+              <p>NetentGames</p>
+            </div>
+          </a>
+        </div>
+        <div class="games__card">
+          <a href="">
+            <img src="@/assets/images/games/gametype.5423.jpg" alt="Game Image" />
+            <div class="games__text">
+              <h3>Starburst XXXtremet</h3>
+              <p>StarBurst Inc.</p>
+            </div>
+          </a>
+        </div>
+        <div class="games__card">
+          <a href="">
+            <img src="@/assets/images/games/gametype.1882.jpg" alt="Game Image" />
+            <div class="games__text">
+              <h3>Black Diamond</h3>
+              <p>RushGameStudio</p>
+            </div>
+          </a>
+        </div>
       </div>
       <div class="games__banners">
         <div class="games__banners-top">
