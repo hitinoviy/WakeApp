@@ -5,13 +5,13 @@ import HeroBlock from '@/components/HeroBlock/HeroBlock.vue';
 import GamesBlock from './components/GamesBlock/GamesBlock.vue';
 import ContactBlock from './components/ContactBlock/ContactBlock.vue';
 import { ref, onMounted } from 'vue';
-//const loading = ref(true);
+const loading = ref(true);
 
-//onMounted(() => {
-//  setTimeout(() => {
-//    loading.value = false;
-//  }, 2000);
-//});
+onMounted(() => {
+  setTimeout(() => {
+    loading.value = false;
+  }, 2000);
+});
 </script>
 
 <template>
