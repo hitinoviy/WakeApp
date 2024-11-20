@@ -1,0 +1,212 @@
+.header {
+  backdrop-filter: blur(10px);
+  background: rgba(1, 1, 31, 0.4);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 12px 0;
+  &__wrapper {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__navigation {
+    display: flex;
+    gap: 64px;
+  }
+  &__logo {
+    width: 48px;
+    height: 48px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__close-btn {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    background: none;
+    border: none;
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    &-items {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+      align-items: center;
+    }
+    &-item {
+      position: relative;
+      a {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        position: relative;
+        color: #fff;
+        transition: 0.3s color;
+        &::before {
+          content: attr(data-text);
+          opacity: 0;
+          transition: 0.3s opacity;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(69deg, rgba(250, 0, 255, 1) 0%, rgba(72, 112, 255, 1) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        opacity: 0;
+        transition: 0.3s opacity;
+        bottom: -26px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 4px 4px 0 0;
+        background-image: linear-gradient(
+          69deg,
+          rgba(250, 0, 255, 1) 0%,
+          rgba(72, 112, 255, 1) 100%
+        );
+        box-shadow: 0 4px 16px 0 rgba(138, 97, 255, 0.6);
+      }
+      &:hover {
+        a {
+          color: transparent;
+          &::before {
+            opacity: 1;
+          }
+        }
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__account {
+    display: flex;
+    gap: 16px;
+    &-btn {
+      font-weight: 700;
+      font-size: 18px;
+      color: #fff;
+      padding: 9px 32px;
+      border: none;
+      background: none;
+      position: relative;
+      z-index: 10;
+      cursor: pointer;
+      &::before {
+        content: attr(data-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        opacity: 0;
+        transition: 0.3s opacity;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        background-image: linear-gradient(
+          69deg,
+          rgba(250, 0, 255, 1) 0%,
+          rgba(72, 112, 255, 1) 100%
+        );
+      }
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__burger-btn {
+    border: none;
+    background: none;
+    font-size: 30px;
+    color: #fff;
+    display: none;
+  }
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 15;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    &__wrapper {
+      max-width: 80%;
+    }
+  }
+}
+@media (max-width: 820px) {
+  .header {
+    &__burger-btn {
+      display: block;
+    }
+    &__menu {
+      display: flex;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      z-index: 110;
+      background: #333333;
+      width: 80%;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      &.active {
+        transform: translateX(0);
+      }
+      &-items {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+      }
+      &-item::before {
+        display: none;
+      }
+    }
+    &__close-btn {
+      display: block;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    &__account {
+      gap: 7px;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .header {
+    &__account-btn {
+      font-size: 15px;
+      padding: 9px 20px;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use 'fonts.scss';
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Proximanova';
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(180deg, rgba(2, 12, 45, 0) 0%, #0f0f33 60%, #06071c4b 100%),
+    url(@/assets/images/bg_hero.png) 50% -50% / 100% 75% no-repeat,
+    url(@/assets/images/bg_contact.jpeg) 50% 85% / 163% 75% no-repeat, #020c2d;
+}
+
+@media (max-width: 1200px) {
+  body {
+    background: linear-gradient(180deg, rgba(2, 12, 45, 0) 0%, #0f0f33 60%, #06071c4b 100%),
+      url(@/assets/images/bg_hero.png) 50% -25%/110% 50% no-repeat,
+      url(@/assets/images/bg_contact.jpeg) 50% 90% / 163% 35% no-repeat, #020c2d;
+  }
+}
+
+@media (max-width: 850px) {
+  body {
+    background: linear-gradient(180deg, rgba(2, 12, 45, 0) 0%, #0f0f33 60%, #06071c4b 100%),
+      url(@/assets/images/bg_hero.png) 50% -5%/110% 30% no-repeat,
+      url(@/assets/images/bg_contact.jpeg) 50% 91%/163% 25% no-repeat, #020c2d;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    background: linear-gradient(180deg, rgba(2, 12, 45, 0) 0%, #0f0f33 60%, #06071c4b 100%),
+      url(@/assets/images/bg_hero.png) 50% 0%/110% 15% no-repeat,
+      url(@/assets/images/bg_contact.jpeg) 50% 91%/230% 20% no-repeat, #020c2d;
+  }
+}
