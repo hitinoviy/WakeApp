@@ -183,6 +183,14 @@
   }
 }
 @media (max-width: 480px) {
+  .hero {
+    &__info-title {
+      font-style: 36px;
+    }
+    &__info-subtitle {
+      font-size: 22px;
+    }
+  }
   .form {
     &__icons {
       justify-content: center;

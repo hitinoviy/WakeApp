@@ -1,6 +1,3 @@
-<script setup>
-import GameBlock from '../GameBlock/GameBlock.vue';
-</script>
 <template>
   <div class="games">
     <div class="games__title">
